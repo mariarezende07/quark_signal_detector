@@ -77,10 +77,9 @@ class Yolov9:
         
         pred = self.model(img, augment=False)
         pred = pred[0][1]
-
+        
         # NMS
         pred = non_max_suppression(pred, self.conf_thres, self.iou_thres, self.classes, False, max_det=1000)
-
         centers = []
         # Process predictions
         for i, det in enumerate(pred):  # per image
