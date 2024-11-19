@@ -76,6 +76,7 @@ class Yolov9:
             # Inference
         
         pred = self.model(img, augment=False)
+        pred = pred[0][1]
 
         # NMS
         pred = non_max_suppression(pred, self.conf_thres, self.iou_thres, self.classes, False, max_det=1000)
