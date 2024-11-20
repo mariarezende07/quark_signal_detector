@@ -1,0 +1,16 @@
+names:
+- person
+- prohibited
+- stop
+- vehicle
+- velocity
+nc: 5
+roboflow:
+  license: CC BY 4.0
+  project: deteccaonotransito
+  url: https://universe.roboflow.com/carlatrafficsign/deteccaonotransito/dataset/2
+  version: 2
+  workspace: carlatrafficsign
+test: ../test/images
+train: DeteccaoNotransito-2/train/images
+val: DeteccaoNotransito-2/valid/images

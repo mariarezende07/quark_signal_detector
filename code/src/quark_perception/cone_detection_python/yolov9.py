@@ -17,7 +17,7 @@ class Yolov9:
     def __init__(self, 
                 weights,  # model path or triton URL                 
                 classes = None,
-                data = 'C:/Users/seren/OneDrive/Área de Trabalho/TCC/signal_detector/data.yaml',
+                data = 'data.yaml',
                 img_size=1280,  # inference size (height, width)
                 conf_thres=0.25,  # confidence threshold
                 iou_thres=0.45,  # NMS IOU threshold

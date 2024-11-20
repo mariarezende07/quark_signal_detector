@@ -20,7 +20,7 @@ class ImageSubscriber(Node):
         self.detections_pub = self.create_publisher(Image, '/camera/detections', 1)
         self.cone_centers_pub = self.create_publisher(PoseArray, '/camera/cone_centers', 1)
         
-        self.yolov9 = Yolov9("/home/quark/Documents/yolov9/400_epochs_tiny.pt", 0.6, 0.5, 1280, None)
+        self.yolov9 = Yolov9("best.pt", 0.6, 0.5, 1280, None)
         print("Ready to receive")
 
     def image_callback(self, msg):
